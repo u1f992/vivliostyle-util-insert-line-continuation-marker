@@ -93,6 +93,7 @@ export function insertLineContinuationMarkerToElement(
   let processed = "";
   for (const line of lines) {
     const segments = segmentalizeText(line, { locales });
+    let lastMarkerPosition = 0;
     let acc = "";
     for (let i = 0; i < segments.length; i++) {
       acc += segments[i];
@@ -101,11 +102,10 @@ export function insertLineContinuationMarkerToElement(
       }
 
       while (measureTextWidthPx(acc, font) + markerWidthPx > maxWidthPx) {
-        acc = segments.slice(0, i).join("");
+        acc = segments.slice(lastMarkerPosition, i).join("");
         i--;
       }
       const insertPosition = processed + acc;
-      acc = "";
 
       let position = "";
       (function traverse(/** @type {Node} */ node) {
@@ -137,8 +137,12 @@ export function insertLineContinuationMarkerToElement(
         }
         return false;
       })(elem);
+
+      processed += acc;
+      acc = "";
+      lastMarkerPosition = i + 1;
     }
-    processed += line + lineBreak;
+    processed += acc + lineBreak;
   }
 }
 
