@@ -9,7 +9,7 @@
   "homepage": "https://github.com/u1f992/vivliostyle-util-insert-line-continuation-marker",
   "author": "Koutaro Mukai",
   "license": "GPL-3.0",
-  "description": "",
+  "description": "Add line continuation markers to elements.",
   "type": "module",
   "devDependencies": {
     "prettier": "^3.5.2",
