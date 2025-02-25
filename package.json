@@ -1,0 +1,23 @@
+{
+  "name": "@u1f992/vivliostyle-util-insert-line-continue-marker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.5.2",
+    "unified": "^9.2.2",
+    "vfile": "^5.3.7"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "jsdom": "^26.0.0",
+    "rehype": "^11.0.0"
+  }
+}
