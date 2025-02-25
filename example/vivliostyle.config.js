@@ -4,8 +4,8 @@ import { VFM } from "@vivliostyle/vfm";
 
 import {
   measureTextWidthPx,
-  insertLineContinueMarker,
-} from "@u1f992/vivliostyle-util-insert-line-continue-marker";
+  insertLineContinuationMarker,
+} from "@u1f992/vivliostyle-util-insert-line-continuation-marker";
 
 const font = '20px "Noto Sans Mono CJK JP"';
 /* We specified `500px` in the CSS, but it needs calibration. */
@@ -47,12 +47,12 @@ const vivliostyleConfig = {
   workspaceDir: ".vivliostyle", // directory which is saved intermediate files.
   documentProcessor: (options, metadata) =>
     VFM(options, metadata).use(
-      insertLineContinueMarker,
+      insertLineContinuationMarker,
       {
         maxWidthPx,
         font,
         markerWidthPx,
-        markerClassName: "line-continue",
+        markerClassName: "line-continuation",
       },
       { locales: "ja-JP" },
     ),

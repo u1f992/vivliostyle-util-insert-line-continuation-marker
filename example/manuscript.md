@@ -8,7 +8,7 @@ pre {
 code {
   font: 20px "Noto Sans Mono CJK JP";
 }
-.line-continue::before {
+.line-continuation::before {
   content: " ↩";
   color: deepskyblue;
 }
@@ -16,7 +16,7 @@ code {
  * 行継続マークの後は強制的に改行する
  * 演算誤差などで行継続マークの後に文字が続いてしまうのを防ぐ
  */
-.line-continue::after {
+.line-continuation::after {
   display: block;
 }
 </style>

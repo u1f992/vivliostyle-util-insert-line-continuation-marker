@@ -59,7 +59,7 @@ function segmentalizeText(text, { locales } = {}) {
  * @param {string} markerClassName
  * @param {{ lineBreak?: string; locales?: Intl.LocalesArgument; }} param5
  */
-export function insertLineContinueMarkerToElement(
+export function insertLineContinuationMarkerToElement(
   elem,
   maxWidthPx,
   font,
@@ -128,12 +128,12 @@ export function insertLineContinueMarkerToElement(
  * @param {{ maxWidthPx: number; font: string; markerWidthPx: number; markerClassName: string; }} param0
  * @param {{ selector?: string; lineBreak?: string; locales?: Intl.LocalesArgument; }} param1
  */
-export function insertLineContinueMarker(
+export function insertLineContinuationMarker(
   { maxWidthPx, font, markerWidthPx, markerClassName },
   { selector, lineBreak, locales } = {},
 ) {
   return (
-    /** @type {import("unist").Node} */ tree,
+    /** @type {import("unist").Node | any} */ tree,
     /** @type {import("vfile").VFile | any} */ file,
   ) => {
     selector ??= "pre > code";
@@ -143,7 +143,7 @@ export function insertLineContinueMarker(
     const { document } = jsdom.window;
     const elems = document.querySelectorAll(selector);
     for (const elem of elems) {
-      insertLineContinueMarkerToElement(
+      insertLineContinuationMarkerToElement(
         elem,
         maxWidthPx,
         font,
