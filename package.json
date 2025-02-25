@@ -6,8 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/u1f992/vivliostyle-util-insert-line-continuation-marker",
+  "author": "Koutaro Mukai",
+  "license": "GPL-3.0",
   "description": "",
   "type": "module",
   "devDependencies": {
