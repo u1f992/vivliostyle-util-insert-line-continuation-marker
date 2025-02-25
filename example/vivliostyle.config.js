@@ -26,6 +26,8 @@ if (!fs.existsSync("UDEVGothic-Regular.ttf")) {
   fs.writeFileSync("UDEVGothic-Regular.ttf", fontFile);
 }
 
+// システムにインストールされていないフォントを使用する場合は`registerFont`が必要
+// https://github.com/Automattic/node-canvas?tab=readme-ov-file#registerfont
 deregisterAllFonts();
 registerFont("UDEVGothic-Regular.ttf", { family: "UDEV Gothic" });
 
