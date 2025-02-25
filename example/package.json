@@ -1,7 +1,8 @@
 {
   "type": "module",
   "dependencies": {
+    "@u1f992/vivliostyle-util-insert-line-continuation-marker": "../",
     "@vivliostyle/cli": "^8.18.0",
-    "@u1f992/vivliostyle-util-insert-line-continuation-marker": "../"
+    "jszip": "^3.10.1"
   }
 }

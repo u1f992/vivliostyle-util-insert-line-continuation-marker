@@ -1,4 +1,8 @@
 <style>
+@font-face {
+  font-family: "UDEV Gothic";
+  src: url("UDEVGothic-Regular.ttf");
+}
 pre {
   background-color: lightcyan;
   width: 500px;
@@ -6,7 +10,7 @@ pre {
   word-break: break-all;
 }
 code {
-  font: 20px "Noto Sans Mono CJK JP";
+  font: 20px "UDEV Gothic";
 }
 .line-continuation::before {
   content: " ↩";
@@ -17,6 +21,7 @@ code {
  * 演算誤差などで行継続マークの後に文字が続いてしまうのを防ぐ
  */
 .line-continuation::after {
+  content: "";
   display: block;
 }
 </style>
@@ -31,7 +36,7 @@ function hoge() {
 
 /*---------------------------------------------------*/
 
-/* 全角文字や曖昧幅の文字を含む場合にも┗│o_o│┓まずまず正しく行継続マークを付けられる */
+/* 全角文字や曖昧幅の文字┗│o_o│┓を含む場合にもまずまずの位置に行継続マークを付けられる */
 ```
 
 <!-- prettier-ignore-end -->
